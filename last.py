@@ -8,7 +8,7 @@ from sam2.build_sam import build_sam2_video_predictor
 # --- Configuration ---
 CHECKPOINT = r"./checkpoints/sam2.1_hiera_tiny.pt"
 MODEL_CONFIG = r"configs/sam2.1/sam2.1_hiera_t.yaml" 
-VIDEO_PATH = r"D:\AA HILCPS Projects\openvino-segment-anything-interactive-demo\rohit_anna_data.mp4"
+VIDEO_PATH = r"D:\AA HILCPS Projects\openvino-segment-anything-interactive-demo\world.mp4"
 TEMP_FRAME_DIR = r"./temp_frames"
 
 device = torch.device("cpu")
@@ -149,4 +149,5 @@ for out_frame_idx, out_obj_ids, out_mask_logits in predictor.propagate_in_video(
 
 out.release()
 cv2.destroyAllWindows()
+
 print("\nSuccess! Video saved to output_logic.mp4")
