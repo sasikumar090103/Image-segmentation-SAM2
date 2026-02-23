@@ -8,7 +8,7 @@ from sam2.build_sam import build_sam2_video_predictor
 # --- Configuration (CPU & Tiny Model) ---
 CHECKPOINT = r"./checkpoints/sam2.1_hiera_tiny.pt"
 MODEL_CONFIG = r"configs/sam2.1/sam2.1_hiera_t.yaml" 
-VIDEO_PATH = r"D:\AA HILCPS Projects\openvino-segment-anything-interactive-demo\rohit_anna_data.mp4"
+VIDEO_PATH = r"D:\AA HILCPS Projects\openvino-segment-anything-interactive-demo\world.mp4"
 TEMP_FRAME_DIR = r"./temp_frames"
 
 # 1. Initialize SAM 2 Predictor for CPU
@@ -106,4 +106,5 @@ for out_frame_idx, out_obj_ids, out_mask_logits in predictor.propagate_in_video(
     cv2.waitKey(1)
 
 out.release()
+
 print("\nSuccess! Video saved to output_cpu_sam2.mp4")
