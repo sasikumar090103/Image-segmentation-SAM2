@@ -9,3 +9,8 @@ last.py : video object segmentation algorithm for cpu, has additional object det
 
 
 final_unsure.py : unchecked code(with all changes)
+
+
+git ref: https://github.com/yas-sim/openvino-segment-anything-interactive-demo/tree/main
+
+git ref : https://github.com/facebookresearch/sam2
